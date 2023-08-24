@@ -39,7 +39,24 @@ class _LandingPageState extends State<LandingPage> {
           const SizedBox(
             height: 5,
           ),
-          const Text("Find recipes based on the ingredients you have")
+          const Text(
+            "Find recipes based on the ingredients you have",
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          SizedBox(
+            height: 370,
+            width: 350,
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "What ingredients do you want to finish today ",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
