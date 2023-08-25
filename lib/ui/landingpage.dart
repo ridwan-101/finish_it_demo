@@ -8,6 +8,8 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
+  int _currentIndex = 0; // Current index for the selected tab
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,18 +86,37 @@ class _LandingPageState extends State<LandingPage> {
                 ),
               ),
             ),
-            Container(
-              padding: const EdgeInsets.all(1),
-              width: 427,
-              height: 447,
-              child: Image.asset(
-                'images/bcurved.png', // Replace with your image path
-                fit: BoxFit.none,
-              ),
-            ),
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star),
+            label: 'Favorites',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+        ],
+      ),
     );
   }
+}
+
+void main() {
+  runApp(const MaterialApp(
+    home: LandingPage(),
+  ));
 }
