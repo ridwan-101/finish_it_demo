@@ -90,33 +90,40 @@ class _LandingPageState extends State<LandingPage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color(0xFF1BA371),
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
             _currentIndex = index;
           });
         },
+        unselectedItemColor: Colors.black,
+        selectedItemColor: Colors.white,
+        selectedLabelStyle: const TextStyle(
+          fontSize: 14.0,
+          fontWeight: FontWeight.bold,
+        ),
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home_outlined,
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
+            icon: Icon(
+              Icons.star_outline,
+            ),
             label: 'Favorites',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
+            icon: Icon(
+              Icons.settings_outlined,
+            ),
             label: 'Settings',
           ),
         ],
       ),
     );
   }
-}
-
-void main() {
-  runApp(const MaterialApp(
-    home: LandingPage(),
-  ));
 }
