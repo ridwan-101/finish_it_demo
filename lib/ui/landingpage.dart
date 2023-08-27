@@ -90,7 +90,7 @@ class _LandingPageState extends State<LandingPage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color(0xFF1BA371),
+        backgroundColor: const Color(0xFF018354),
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
