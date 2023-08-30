@@ -51,7 +51,9 @@ class _LandingPageState extends State<LandingPage> {
             ),
             SizedBox(
               width: 345,
-              child: CustomSearchWidget(), // Use the CustomSearchWidget here
+              child: CustomSearchWidget(
+                onWordSaved: (String) {},
+              ),
             ),
             const SizedBox(
               height: 80,
