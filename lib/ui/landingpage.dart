@@ -1,3 +1,4 @@
+import 'package:finish_it_demo/ui/searchresult.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatefulWidget {
@@ -40,34 +41,20 @@ class _LandingPageState extends State<LandingPage> {
               ),
             ),
             const SizedBox(
-              height: 5,
+              height: 10,
             ),
             const Text(
               "Find recipes based on the ingredients you have",
             ),
             const SizedBox(
-              height: 20,
+              height: 25,
             ),
             SizedBox(
               width: 345,
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: "What ingredients do you want to finish today ? ",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Colors.black,
-                    ),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  prefixIcon: const Icon(Icons.search),
-                ),
-              ),
+              child: CustomSearchWidget(), // Use the CustomSearchWidget here
             ),
             const SizedBox(
-              height: 60,
+              height: 80,
             ),
             SizedBox(
               width: 138,
