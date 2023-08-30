@@ -1,4 +1,4 @@
-import 'package:finish_it_demo/ui/searchresult.dart';
+import 'package:finish_it_demo/model/searchresult.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatefulWidget {
