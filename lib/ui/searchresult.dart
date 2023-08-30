@@ -39,7 +39,7 @@ class _CustomSearchWidgetState extends State<CustomSearchWidget> {
           child: TextField(
             controller: _searchController,
             decoration: InputDecoration(
-              hintText: "Type a word...",
+              hintText: "What ingredients do you have ?",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
               ),
