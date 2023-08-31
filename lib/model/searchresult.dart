@@ -100,6 +100,8 @@ class _CustomSearchWidgetState extends State<CustomSearchWidget> {
               child: Container(
                 padding:
                     const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                margin: const EdgeInsets.all(
+                    4), // Add margin for spacing between suggestion boxes
                 decoration: BoxDecoration(
                   color: const Color(0xFFE5E7EB),
                   borderRadius: BorderRadius.circular(9),

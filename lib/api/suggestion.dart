@@ -1,17 +1,16 @@
 class SuggestionProvider {
   static List<String> mockSuggestions = [
-    "Avocado"
-        "Broccoli"
-        "Carrot"
-        "Chicken"
-        "Cheese"
-        "Garlic"
-        ' Ice Cream'
-        "Salmon"
-        "Tomato"
-        "Yogurt"
+    'Chicken',
+    'Banana',
+    'Tomato',
+    'Grapes',
+    'Rice',
+    'Beans',
+    'Pear',
+    'Strawberry',
   ];
 }
+
 
 // "Apple"
 //     "Avocado"
