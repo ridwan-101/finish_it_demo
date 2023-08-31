@@ -11,13 +11,15 @@ class RecipeListResult extends StatefulWidget {
 }
 
 class _RecipeListResultState extends State<RecipeListResult> {
-  final SearchResultBloc searchResultBloc = SearchResultBloc();
+  final SearchResultBloc searchResultBloc =
+      SearchResultBloc(); // instance of the class
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<SearchResultBloc, SearchResultState>(
-      listener: (context, state) {
-        // TODO: implement listener
-      },
+      bloc: searchResultBloc, //parameter SearchResultBloc
+      listenWhen: (previous, current) {},
+      buildWhen: (previous, current) {},
+      listener: (context, state) {},
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(

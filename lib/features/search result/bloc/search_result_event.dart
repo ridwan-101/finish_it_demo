@@ -11,4 +11,4 @@ class RefreshResultsClickedEvent extends SearchResultEvent {}
 
 class ViewRecepieClickedEvent extends SearchResultEvent {}
 
-class ViewRecepieUnClickedEvent extends SearchResultEvent {}
+class ViewRecepieClickedNavigateEvent extends SearchResultEvent {}
