@@ -31,7 +31,7 @@ class _LandingPageState extends State<LandingPage> {
               height: 30,
             ),
             const Text(
-              "Welcome to Finish it",
+              "Welcome to Finish It",
               style: TextStyle(
                 fontSize: 32,
                 height: 1.2,

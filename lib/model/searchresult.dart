@@ -23,7 +23,9 @@ class _CustomSearchWidgetState extends State<CustomSearchWidget> {
 
   void _updateSuggestions(String input) {
     _suggestions = SuggestionProvider.mockSuggestions
-        .where((word) => word.toLowerCase().startsWith(input.toLowerCase()))
+        .where((word) =>
+            word.toLowerCase().contains(input.toLowerCase()) &&
+            !_typedWords.contains(word))
         .toList();
   }
 
