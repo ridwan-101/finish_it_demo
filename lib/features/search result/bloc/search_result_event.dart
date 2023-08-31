@@ -3,12 +3,12 @@ part of 'search_result_bloc.dart';
 @immutable
 abstract class SearchResultEvent {}
 
-class FavoriteRecepieButttonClickedEvent {}
+class FavoriteRecepieButttonClickedEvent extends SearchResultEvent {}
 
-class FavoriteRecepieButttonNavigateEvent {}
+class FavoriteRecepieButttonNavigateEvent extends SearchResultEvent {}
 
-class RefreshResultsClickedEvent {}
+class RefreshResultsClickedEvent extends SearchResultEvent {}
 
-class ViewRecepieClickedEvent {}
+class ViewRecepieClickedEvent extends SearchResultEvent {}
 
-class ViewRecepieClickedNavigateEvent {}
+class ViewRecepieUnClickedEvent extends SearchResultEvent {}
