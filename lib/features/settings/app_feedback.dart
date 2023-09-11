@@ -11,12 +11,7 @@ class AppFeedback extends StatefulWidget {
 class _AppFeedbackState extends State<AppFeedback> {
   TextEditingController _textController = TextEditingController();
 
-  // Function to handle the feedback submission
-  void _submitFeedback() {
-    // Here, you can add code to handle the submission of feedback
-    // For example, you can access the entered text using _textController.text
-    // and send it to an API, save it locally, or perform any other desired action.
-  }
+  void _submitFeedback() {}
 
   @override
   Widget build(BuildContext context) {

@@ -10,7 +10,7 @@ class TermsAndCondition extends StatefulWidget {
 class _TermsAndConditionState extends State<TermsAndCondition> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text(
           "Settings",
@@ -21,10 +21,27 @@ class _TermsAndConditionState extends State<TermsAndCondition> {
         ),
         centerTitle: true,
       ),
-
-
-
-      
+      body: Container(
+        height: 550,
+        width: 335,
+        margin: const EdgeInsets.only(left: 12),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: const BorderRadius.all(
+            Radius.circular(20),
+          ),
+          border: Border.all(color: Colors.black),
+        ),
+        child: const Center(
+          child: Text(
+            "",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

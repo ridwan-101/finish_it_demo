@@ -1,3 +1,4 @@
+import 'package:finish_it_demo/features/settings/settings_page.dart';
 import 'package:flutter/material.dart';
 
 class SearchHistory extends StatefulWidget {
@@ -10,6 +11,33 @@ class SearchHistory extends StatefulWidget {
 class _SearchHistoryState extends State<SearchHistory> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    appBar:
+    AppBar(
+      title: const Text(
+        "App Feedback",
+        style: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Color(0xFF323232),
+        ),
+      ),
+      centerTitle: true,
+      backgroundColor: Colors.white,
+      leading: IconButton(
+        icon: const Icon(Icons.arrow_back, color: Colors.black),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const SettingsPage(),
+            ),
+          );
+        },
+      ),
+    );
+    return const Scaffold(
+
+      
+    );
   }
 }
