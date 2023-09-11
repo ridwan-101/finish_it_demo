@@ -5,7 +5,7 @@ abstract class SearchResultEvent {}
 
 class FavoriteRecepieButttonClickedEvent extends SearchResultEvent {}
 
-class FavoriteRecepieButttonNavigateEvent extends SearchResultEvent {}
+// class FavoriteRecepieButttonNavigateEvent extends SearchResultEvent {}
 
 class RefreshResultsClickedEvent extends SearchResultEvent {}
 

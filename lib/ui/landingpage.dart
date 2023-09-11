@@ -1,5 +1,7 @@
-import 'package:finish_it_demo/model/searchresult.dart';
+import 'package:finish_it_demo/ui/model/searchresult.dart';
 import 'package:flutter/material.dart';
+
+import 'package:finish_it_demo/features/search result/recepie ui/recipelistresult.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -62,7 +64,14 @@ class _LandingPageState extends State<LandingPage> {
               width: 138,
               height: 45,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            const RecipeListResult()), // Replace NewPage with your actual page widget
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF1BA371),
                   shape: RoundedRectangleBorder(
