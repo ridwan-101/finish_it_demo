@@ -15,9 +15,9 @@ class _LandingPageState extends State<LandingPage> {
 
   // Pages to navigate to when icons are clicked
   final List<Widget> _pages = [
-    LandingPage(),
-    RecipeListResult(),
-    SettingsPage(),
+    const LandingPage(),
+    const RecipeListResult(),
+    const SettingsPage(),
   ];
 
   @override
