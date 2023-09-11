@@ -51,12 +51,12 @@ class _SettingsPageState extends State<SettingsPage> {
             children: <Widget>[
               InkWell(
                 onTap: () {
-                  // Navigate to the feedback page when the ListTile is clicked.
+                  // Navigate to the clear search history page when the ListTile is clicked.
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          const AppFeedback(), // Replace FeedbackPage with your actual page.
+                          const AppFeedback(), // Replace ClearSearchHistoryPage with your actual page.
                     ),
                   );
                 },

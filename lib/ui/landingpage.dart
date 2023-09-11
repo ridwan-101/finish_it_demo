@@ -1,6 +1,7 @@
 import 'package:finish_it_demo/features/search%20result/ui/recipelistresult.dart';
 import 'package:finish_it_demo/features/settings/settings_page.dart';
-import 'package:finish_it_demo/model/searchresult.dart';
+import 'package:finish_it_demo/ui/model/searchresult.dart';
+
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatefulWidget {

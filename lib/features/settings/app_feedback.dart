@@ -1,4 +1,5 @@
 import 'package:finish_it_demo/features/settings/settings_page.dart';
+import 'package:finish_it_demo/ui/landingpage.dart';
 import 'package:flutter/material.dart';
 
 class AppFeedback extends StatefulWidget {
@@ -30,12 +31,12 @@ class _AppFeedbackState extends State<AppFeedback> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const SettingsPage(),
-              ),
-            );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => const LandingPage(),
+            //   ),
+            // );
           },
         ),
       ),
