@@ -1,10 +1,10 @@
-import 'package:finish_it_demo/ui/model/searchresult.dart';
+import 'package:finish_it_demo/features/search%20result/ui/recipelistresult.dart';
+import 'package:finish_it_demo/features/settings/settings_page.dart';
+import 'package:finish_it_demo/model/searchresult.dart';
 import 'package:flutter/material.dart';
 
-import 'package:finish_it_demo/features/search result/recepie ui/recipelistresult.dart';
-
 class LandingPage extends StatefulWidget {
-  const LandingPage({super.key});
+  const LandingPage({Key? key}) : super(key: key);
 
   @override
   State<LandingPage> createState() => _LandingPageState();
@@ -12,6 +12,13 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
   int _currentIndex = 0; // Current index for the selected tab
+
+  // Pages to navigate to when icons are clicked
+  final List<Widget> _pages = [
+    LandingPage(),
+    RecipeListResult(),
+    SettingsPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -94,11 +101,19 @@ class _LandingPageState extends State<LandingPage> {
           setState(() {
             _currentIndex = index;
           });
+
+          // Navigate to the selected page
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => _pages[index],
+            ),
+          );
         },
         unselectedItemColor: Colors.black,
         selectedItemColor: Colors.white,
         selectedLabelStyle: const TextStyle(
-          fontSize: 14.0,
+          fontSize: 16.0,
           fontWeight: FontWeight.bold,
         ),
         items: const [
