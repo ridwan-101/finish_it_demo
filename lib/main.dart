@@ -1,6 +1,4 @@
-import 'package:finish_it_demo/alex/fourth.dart';
-import 'package:finish_it_demo/alex/errorscreen.dart';
-import 'package:finish_it_demo/alex/norecepie_error.dart';
+
 import 'package:finish_it_demo/ui/landingpage.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const ErrorScreen(),
+      home: const LandingPage(),
     );
   }
 }

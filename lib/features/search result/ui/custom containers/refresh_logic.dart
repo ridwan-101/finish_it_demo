@@ -11,7 +11,9 @@ class CustomButtonContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: () {
+        print(Text("logic button clciked "));
+      },
       child: Container(
         width: 150,
         height: 51,
