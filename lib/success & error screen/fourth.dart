@@ -74,7 +74,7 @@ class _SearchResultState extends State<SearchResult> {
                           borderRadius: BorderRadius.circular(8),
                           border:
                               Border.all(color: Color(0xFFCCC6C6), width: 1)),
-                      padding:
+                      padding: 
                           EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                       child: Row(
                         children: [
