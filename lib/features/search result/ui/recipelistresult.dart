@@ -1,3 +1,4 @@
+import 'package:finish_it_demo/features/search%20result/ui/custom%20containers/refresh_logic.dart';
 import 'package:finish_it_demo/ui/landingpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -48,36 +49,11 @@ class _RecipeListResultState extends State<RecipeListResult> {
           body: SingleChildScrollView(
             child: Column(
               children: [
-                GestureDetector(
+                CustomButtonContainer(
                   onTap: () {
                     // Refresh logic here
                   },
-                  child: Container(
-                    width: 150,
-                    height: 51,
-                    margin: const EdgeInsets.only(left: 10),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF018354),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Refresh results",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(width: 8),
-                        Icon(Icons.sync_outlined, color: Colors.white),
-                      ],
-                    ),
-                  ),
                 ),
-                Container()
               ],
             ),
           ),
