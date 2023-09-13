@@ -1,5 +1,5 @@
-import 'package:finish_it_demo/api/suggestion.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class CustomSearchWidget extends StatefulWidget {
   final Function(String) onWordSaved;
@@ -22,22 +22,50 @@ class _CustomSearchWidgetState extends State<CustomSearchWidget> {
   }
 
   void _updateSuggestions(String input) {
-    _suggestions = SuggestionProvider.mockSuggestions
-        .where((word) =>
-            word.toLowerCase().contains(input.toLowerCase()) &&
-            !_typedWords.contains(word))
-        .toList();
+    // Your existing suggestion code
+    // ...
+
+    // Update suggestions based on user input
   }
 
-  void _saveCurrentWord() {
+  void _saveCurrentWord() async {
     final currentWord = _searchController.text.trim();
     if (currentWord.isNotEmpty) {
-      widget.onWordSaved(currentWord);
       setState(() {
         _typedWords.add(currentWord);
         _searchController.clear();
         _suggestions.clear(); // Clear suggestions after saving a word
       });
+
+      final apiKey = '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'; // Replace with your OpenAI API key
+      final endpoint = 'https://api.openai.com/v1/engines/davinci/completions';
+
+      final prompt = "Generate a recipe using ingredients: $_typedWords";
+
+      final response = await http.post(
+        Uri.parse(endpoint),
+        headers: {
+          'Authorization': 'Bearer $apiKey',
+          'Content-Type': 'application/json',
+        },
+        body: {
+          'prompt': prompt,
+          'max_tokens': 100, // Adjust the max tokens as needed
+        },
+      );
+
+      if (response.statusCode == 200) {
+        final generatedRecipe = response.body;
+        // Process the generated recipe as needed
+        print(generatedRecipe);
+
+        // Call the callback function to handle the generated recipe
+        widget.onWordSaved(generatedRecipe);
+      } else {
+        // Handle API errors here
+        print('Error: ${response.statusCode}');
+        print('Response: ${response.body}');
+      }
     }
   }
 
@@ -50,7 +78,7 @@ class _CustomSearchWidgetState extends State<CustomSearchWidget> {
           child: TextField(
             controller: _searchController,
             decoration: InputDecoration(
-              hintText: "What ingredients do you have ?",
+              hintText: "What ingredients do you have?",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
               ),

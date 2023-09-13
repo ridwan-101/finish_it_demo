@@ -71,7 +71,7 @@ class _RecipeListResultState extends State<RecipeListResult> {
                       border: Border.all(color: Colors.black),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),

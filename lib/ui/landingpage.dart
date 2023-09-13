@@ -1,5 +1,6 @@
 import 'package:finish_it_demo/features/search%20result/ui/recipelistresult.dart';
 import 'package:finish_it_demo/features/settings/settings_page.dart';
+import 'package:finish_it_demo/success%20&%20error%20screen/loadingscreen.dart';
 import 'package:finish_it_demo/ui/model/searchresult.dart';
 
 import 'package:flutter/material.dart';
@@ -71,26 +72,39 @@ class _LandingPageState extends State<LandingPage> {
             SizedBox(
               width: 138,
               height: 45,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            const RecipeListResult()), // Replace NewPage with your actual page widget
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF1BA371),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
-                child: const Text(
-                  'Get Started',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+child: ElevatedButton(
+  onPressed: () async {
+    // Navigate to the LoadingScreen when the button is clicked
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const LoadingScreen(),
+      ),
+    );
+
+    // Simulate recipe generation (replace with your actual logic)
+    await generateRecipe();
+
+    // Navigate to the RecipeListResult screen once the recipe is generated
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const RecipeListResult(),
+      ),
+    );
+  },
+  style: ElevatedButton.styleFrom(
+    backgroundColor: const Color(0xFF1BA371),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10),
+    ),
+  ),
+  child: const Text(
+    'Get Started',
+    style: TextStyle(color: Colors.white),
+  ),
+),
+
             ),
           ],
         ),
