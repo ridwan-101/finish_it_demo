@@ -11,10 +11,8 @@ class _HomeSearchSortState extends State<HomeSearchSort> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        height: 223,
-        width: 358,
-      ),
-    );
+        body: Column(children: [
+
+    ]));
   }
 }
