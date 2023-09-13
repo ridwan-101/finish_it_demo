@@ -39,6 +39,7 @@ class _RecipeListResultState extends State<RecipeListResult> {
               onPressed: () {
                 Navigator.push(
                   context,
+
                   MaterialPageRoute(
                       builder: (context) =>
                           const LandingPage()), // Replace NewPage with your actual page widget
@@ -46,6 +47,8 @@ class _RecipeListResultState extends State<RecipeListResult> {
               },
             ),
           ),
+          // ... previous code ...
+
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -54,6 +57,14 @@ class _RecipeListResultState extends State<RecipeListResult> {
                     // Refresh logic here
                   },
                 ),
+                const SizedBox(height: 16),
+                Container(
+
+
+
+
+                  
+                )
               ],
             ),
           ),

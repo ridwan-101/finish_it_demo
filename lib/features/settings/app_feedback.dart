@@ -1,5 +1,3 @@
-import 'package:finish_it_demo/features/settings/settings_page.dart';
-import 'package:finish_it_demo/ui/landingpage.dart';
 import 'package:flutter/material.dart';
 
 class AppFeedback extends StatefulWidget {
@@ -27,42 +25,31 @@ class _AppFeedbackState extends State<AppFeedback> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.white,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder: (context) => const LandingPage(),
-            //   ),
-            // );
-          },
-        ),
       ),
       body: Column(
         children: [
-          Container(
-            height: 310,
-            width: 335,
-            margin: const EdgeInsets.only(left: 12),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: const BorderRadius.all(
-                Radius.circular(20),
+          Center(
+            child: Container(
+              height: 310,
+              width: 335,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(20),
+                ),
+                border: Border.all(color: Colors.black),
               ),
-              border: Border.all(color: Colors.black),
-            ),
-            child: TextField(
-              controller: _textController,
-              maxLength: 500, // Limit to 500 characters
-              decoration: const InputDecoration(
-                hintText: 'Type here...', // Placeholder text
-                border: InputBorder.none, // Remove the default border
-                contentPadding:
-                    EdgeInsets.all(16), // Adjust the padding as needed
+              child: TextField(
+                controller: _textController,
+                maxLength: 500, // Limit to 500 characters
+                decoration: const InputDecoration(
+                  hintText: 'Type here...', // Placeholder text
+                  border: InputBorder.none, // Remove the default border
+                  contentPadding:
+                      EdgeInsets.all(16), // Adjust the padding as needed
+                ),
+                maxLines: null,
               ),
-              maxLines: null,
             ),
           ),
           const SizedBox(
