@@ -61,18 +61,16 @@ class _RecipeListResultState extends State<RecipeListResult> {
                 const SizedBox(height: 16),
                 Center(
                   child: Container(
-                      height: 223,
-                      width: 370,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(10),
-                        ),
-                        border: Border.all(color: Colors.black),
+                    height: 223,
+                    width: 370,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(10),
                       ),
-                      child: Text(""),
-                      
-                      ),
+                      border: Border.all(color: Colors.black),
+                    ),
+                  ),
                 )
               ],
             ),
