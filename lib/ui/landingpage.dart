@@ -1,12 +1,9 @@
-import 'package:finish_it_demo/features/search%20result/ui/recipelistresult.dart';
-import 'package:finish_it_demo/features/settings/settings_page.dart';
-import 'package:finish_it_demo/success%20&%20error%20screen/loadingscreen.dart';
-import 'package:finish_it_demo/ui/model/searchresult.dart';
 
+import 'package:finish_it_demo/ui/model/searchresult.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatefulWidget {
-  const LandingPage({Key? key}) : super(key: key);
+  const LandingPage({super.key});
 
   @override
   State<LandingPage> createState() => _LandingPageState();
@@ -14,13 +11,6 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
   int _currentIndex = 0; // Current index for the selected tab
-
-  // Pages to navigate to when icons are clicked
-  final List<Widget> _pages = [
-    const LandingPage(),
-    const RecipeListResult(),
-    const SettingsPage(),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -72,39 +62,19 @@ class _LandingPageState extends State<LandingPage> {
             SizedBox(
               width: 138,
               height: 45,
-child: ElevatedButton(
-  onPressed: () async {
-    // Navigate to the LoadingScreen when the button is clicked
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const LoadingScreen(),
-      ),
-    );
-
-    // Simulate recipe generation (replace with your actual logic)
-    await generateRecipe();
-
-    // Navigate to the RecipeListResult screen once the recipe is generated
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const RecipeListResult(),
-      ),
-    );
-  },
-  style: ElevatedButton.styleFrom(
-    backgroundColor: const Color(0xFF1BA371),
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(10),
-    ),
-  ),
-  child: const Text(
-    'Get Started',
-    style: TextStyle(color: Colors.white),
-  ),
-),
-
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF1BA371),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                child: const Text(
+                  'Get Started',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             ),
           ],
         ),
@@ -116,19 +86,11 @@ child: ElevatedButton(
           setState(() {
             _currentIndex = index;
           });
-
-          // Navigate to the selected page
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => _pages[index],
-            ),
-          );
         },
         unselectedItemColor: Colors.black,
         selectedItemColor: Colors.white,
         selectedLabelStyle: const TextStyle(
-          fontSize: 16.0,
+          fontSize: 14.0,
           fontWeight: FontWeight.bold,
         ),
         items: const [

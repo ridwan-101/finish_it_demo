@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/search_result_bloc.dart';
 
 class RecipeListResult extends StatefulWidget {
-  const RecipeListResult({super.key});
+  const RecipeListResult({super.key, required void recipe});
 
   @override
   State<RecipeListResult> createState() => _RecipeListResultState();

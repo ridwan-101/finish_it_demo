@@ -1,9 +1,6 @@
 // loading screen
 
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
-
-import 'package:finish_it_demo/features/search%20result/ui/custom%20containers/refresh_logic.dart';
-import 'package:finish_it_demo/ui/landingpage.dart';
 import 'package:flutter/material.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -17,67 +14,62 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Recipe List",
-          style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Color(0xFF323232)),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) =>
-                      const LandingPage()), // Replace NewPage with your actual page widget
-            );
-          },
-        ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Align(
-            alignment: Alignment.centerLeft,
-            child: CustomButtonContainer(
-              onTap: () {
-                // Refresh logic here
-              },
+      // appBar: AppBar(
+      //   title: const Text(
+      //     "Recipe List",
+      //     style: TextStyle(
+      //         fontSize: 20,
+      //         fontWeight: FontWeight.bold,
+      //         color: Color(0xFF323232)),
+      //   ),
+      //   centerTitle: true,
+      //   backgroundColor: Colors.white,
+      //   leading: IconButton(
+      //     icon: const Icon(Icons.arrow_back, color: Colors.black),
+      //     onPressed: () {
+      //       Navigator.push(
+      //         context,
+      //         MaterialPageRoute(
+      //             builder: (context) =>
+      //                 const LandingPage()), // Replace NewPage with your actual page widget
+      //       );
+      //     },
+      //   ),
+      // ),
+      body: Center(
+        child: SingleChildScrollView(
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            SizedBox(
+              height: 50,
             ),
-          ),
-          SizedBox(
-            height: 50,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('images/loading.gif', width: 150),
-            ],
-          ),
-          SizedBox(
-            height: 46,
-          ),
-          Text(
-            "Recipe hunt in progress...  please be patient.",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w500,
-              color: Color(0xFF000000),
-              letterSpacing: 2.4,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset('images/loading.gif', width: 150),
+              ],
             ),
-            textAlign: TextAlign.center,
-          )
-        ]),
+            SizedBox(
+              height: 100,
+            ),
+            Text(
+              "Recipe hunt in progress...  please be patient.",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+                color: Color(0xFF000000),
+                letterSpacing: 2.4,
+              ),
+              textAlign: TextAlign.center,
+            )
+          ]),
+        ),
       ),
     );
   }
 }
 
-// body: Container(
+
 //   color: Colors.white,
 //   padding: EdgeInsets.all(20),
 //   child: SingleChildScrollView(
