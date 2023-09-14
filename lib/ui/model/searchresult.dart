@@ -1,4 +1,4 @@
-import 'package:finish_it_demo/api/suggestion.dart';
+import 'package:finish_it_demo/api/model/suggestion.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchWidget extends StatefulWidget {
