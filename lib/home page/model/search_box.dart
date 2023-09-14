@@ -1,5 +1,5 @@
 
-import 'package:finish_it_demo/home%20page/model/suggestio_provider.dart';
+import 'package:finish_it_demo/home%20page/model/suggestion_provider.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchWidget extends StatefulWidget {
