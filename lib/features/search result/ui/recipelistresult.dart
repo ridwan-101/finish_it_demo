@@ -1,5 +1,5 @@
 import 'package:finish_it_demo/features/search%20result/ui/custom%20containers/refresh_logic.dart';
-import 'package:finish_it_demo/ui/landingpage.dart';
+import 'package:finish_it_demo/home%20page/landingpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

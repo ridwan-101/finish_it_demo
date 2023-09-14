@@ -3,7 +3,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:finish_it_demo/features/search%20result/ui/custom%20containers/refresh_logic.dart';
-import 'package:finish_it_demo/ui/landingpage.dart';
+import 'package:finish_it_demo/home%20page/landingpage.dart';
 import 'package:flutter/material.dart';
 
 class NoRecipe extends StatefulWidget {

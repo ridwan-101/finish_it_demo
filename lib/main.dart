@@ -1,5 +1,5 @@
 
-import 'package:finish_it_demo/ui/landingpage.dart';
+import 'package:finish_it_demo/home%20page/landingpage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
