@@ -25,7 +25,7 @@ class _LandingPageState extends State<LandingPage> {
             ),
             const SizedBox(height: 60),
             Image.asset(
-              'images/logo.png',
+              'assets/images/logo.png',
               fit: BoxFit.none,
             ),
             const SizedBox(
